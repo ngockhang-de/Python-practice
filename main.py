@@ -36,7 +36,8 @@ class Game:
             print(f'{playername1} win!')
             print(''.join(self.board))
 
-            self.log.append(f'{datetime.datetime.now().strftime("%d-%m-%Y %H:%M")}; {playername1}  vs  {playername2}; {playername1} win! Game - {counter}')
+            self.log.append(
+                f'{datetime.datetime.now().strftime("%d-%m-%Y %H:%M")}; {playername1}  vs  {playername2}; {playername1} win! Game - {counter}')
             return "Player1 win"
         elif self.board[2] == self.board[4] == self.board[6] == ' 0 ' or \
                 self.board[2] == self.board[10] == self.board[18] == ' 0 ' or \
@@ -48,7 +49,8 @@ class Game:
                 self.board[18] == self.board[20] == self.board[22] == ' 0 ':
             print(f'{playername2} win!')
             print(''.join(self.board))
-            self.log.append(f'{datetime.datetime.now().strftime("%d-%m-%Y %H:%M")};   {playername1}  vs  {playername2}; {playername2} win!')
+            self.log.append(
+                f'{datetime.datetime.now().strftime("%d-%m-%Y %H:%M")};   {playername1}  vs  {playername2}; {playername2} win!')
             return "Player2 win"
 
     def play(self):
@@ -148,9 +150,6 @@ class Game:
                 break
 
 
-
-game = Game()
-game.play()
-
-#
-# if __name__ == '__main__':
+if __name__ == '__main__':
+    game = Game()
+    game.play()
